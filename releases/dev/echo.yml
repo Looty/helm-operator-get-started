@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: looty10/echo
-      tag: dev-mn095lcf
+      tag: dev-qburegpp
     replicaCount: 1
     # hpa:
     #   enabled: false
