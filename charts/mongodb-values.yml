@@ -1,0 +1,15 @@
+architecture: replicaset
+replicaCount: 3
+auth:
+  rootPassword: '123456789'
+  username: user
+  password: password
+  database: echos
+  replicaSetKey: '123456789'
+arbiter:
+  enabled: false
+hidden:
+  persistence:
+    size: 1Gi
+persistence:
+  size: 1Gi
