@@ -1,0 +1,8 @@
+# Kubernetes Day 6 Concluding Exercise
+
+The goal of this exercise is to add the Flux CD tool to our Cluster and facilitate the GitOps pattern using the Helm Operator
+
+* Install FluxCD and it's Helm-Operator to the cluster. Follow [this](https://github.com/fluxcd/helm-operator-get-started) guide.
+Instead of the PodInfo demo app used in the tutorial - Use your Echo charts.
+
+* Demonstrate that when you build a new Echo image and push it to GCR, it's being auto-deployed and the config repo is updated automagically by Flux.

@@ -1,0 +1,31 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Values.cronJob.name }}
+spec:
+  schedule: {{ .Values.cronJob.schedule | quote }}
+  successfulJobsHistoryLimit: {{ .Values.cronJob.successfulLimit }}
+  failedJobsHistoryLimit: {{ .Values.cronJob.failedLimit }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name:  {{ .Values.cronJob.name }}
+            image:  {{ .Values.cronJob.image.repository }}
+            env:
+            - name: {{ .Values.secret.rootPass.envName }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.nameFile }}
+                  key: {{ .Values.secret.rootPass.keyName }}
+            - name: {{ .Values.secret.primaryUrl.envName }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.nameFile }}
+                  key: {{ .Values.secret.primaryUrl.keyName }}
+            command:
+            - /bin/bash
+            - -c
+            - mongo mongodb://root:$MONGODB_ROOT_PASSWORD@$MONGODB_PRIMARY_URL/?authSource=admin --eval "db=db.getSiblingDB('echos');db.echos.remove({})"
+          restartPolicy: OnFailure
