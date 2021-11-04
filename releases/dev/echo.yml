@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: echo-dev
   chart:
-    git: git@github.com:Looty/echo.git
+    git: git@github.com:Looty/helm-operator-get-started.git
     path: charts/echo
     ref: master
   values:
