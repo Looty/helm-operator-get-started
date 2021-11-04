@@ -1,0 +1,31 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-mongodb-rc
+  namespace: stg
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:stg-*
+spec:
+  releaseName: echo-mongodb-rc
+  chart:
+    git: git@github.com:Looty/helm-operator-get-started.git
+    path: charts/mongodb
+    ref: master
+  values:
+    architecture: replicaset
+    replicaCount: 3
+    auth:
+      rootPassword: '123456789'
+      username: user
+      password: password
+      database: echos
+      replicaSetKey: '123456789'
+    arbiter:
+      enabled: false
+    hidden:
+      persistence:
+        size: 1Gi
+    persistence:
+      size: 1Gi
