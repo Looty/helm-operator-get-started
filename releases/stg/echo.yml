@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: looty10/echo
-      tag: stg-9ij63o4c
+      tag: stg-eggihjvb
     replicaCount: 2
     # hpa:
     #   enabled: true

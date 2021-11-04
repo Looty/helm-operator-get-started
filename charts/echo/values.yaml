@@ -8,7 +8,7 @@ image:
   repository: looty10/echo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "2.2"
+  tag: 0.4.10
 
 container:
   port: 3000
