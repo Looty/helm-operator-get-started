@@ -40,7 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 ingress:
@@ -86,9 +86,9 @@ affinity: {}
 
 configMap:
   nameFile: configmap
-  loglevel: "info"
-  persistance: "true"
-  dbName: "echos"
+  loglevel: info
+  persistance: false
+  dbName: echo
 
 cronJob:
   name: mongodb-cleaner
