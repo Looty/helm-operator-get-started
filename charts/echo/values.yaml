@@ -104,7 +104,7 @@ secret:
   url:
     envName: MONGODBURL
     keyName: mongo_url
-    value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3MuZGVmYXVsdC5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTEubW9uZ29kYi1oZWFkbGVzcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMi5tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+    value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAMTI3LjAuMC4xOjI3MDE3L2VjaG8/YXV0aFNvdXJjZT1hZG1pbg==
   rootPass:
     envName: MONGODB_ROOT_PASSWORD
     keyName: root_password
@@ -112,4 +112,4 @@ secret:
   primaryUrl:
     envName: MONGODB_PRIMARY_URL
     keyName: primary_url
-    value: bW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3MuZGVmYXVsdC5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNw==
+    value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAMTI3LjAuMC4xOjI3MDE3L2VjaG8/YXV0aFNvdXJjZT1hZG1pbg==
