@@ -17,4 +17,7 @@ spec:
     image:
       repository: looty10/echo
       tag: 0.4.10
-    replicaCount: 3
+    replicaCount: 1
+    secret:
+      url:
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3MucHJvZC5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTEubW9uZ29kYi1oZWFkbGVzcy5wcm9kLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMi5tb25nb2RiLWhlYWRsZXNzLnByb2Quc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=

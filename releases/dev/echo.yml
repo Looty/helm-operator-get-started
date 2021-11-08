@@ -18,5 +18,8 @@ spec:
       repository: looty10/echo
       tag: dev-mn095lcf
     replicaCount: 1
-    # hpa:
-    #   enabled: false
+    secret:
+      url:
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3MuZGV2LnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMS5tb25nb2RiLWhlYWRsZXNzLmRldi5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTIubW9uZ29kYi1oZWFkbGVzcy5kZXYuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+      # hpa:
+      #   enabled: false

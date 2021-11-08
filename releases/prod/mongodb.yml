@@ -29,3 +29,5 @@ spec:
         size: 1Gi
     persistence:
       size: 1Gi
+    global:
+      namespaceOverride: prod

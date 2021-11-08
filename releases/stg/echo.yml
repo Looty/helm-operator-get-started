@@ -17,7 +17,10 @@ spec:
     image:
       repository: looty10/echo
       tag: stg-eggihjvb
-    replicaCount: 2
+    replicaCount: 1
+    secret:
+      url:
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3Muc3RnLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMS5tb25nb2RiLWhlYWRsZXNzLnN0Zy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTIubW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
     # hpa:
     #   enabled: true
     #   maxReplicas: 10
