@@ -20,9 +20,12 @@ spec:
     replicaCount: 1
     secret:
       url:
-        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3Muc3RnLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMS5tb25nb2RiLWhlYWRsZXNzLnN0Zy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTIubW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLmVjaG8tbW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcsbW9uZ29kYi0xLmVjaG8tbW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcsbW9uZ29kYi0yLmVjaG8tbW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+        #bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAbW9uZ29kYi0wLm1vbmdvZGItaGVhZGxlc3Muc3RnLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LG1vbmdvZGItMS5tb25nb2RiLWhlYWRsZXNzLnN0Zy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxtb25nb2RiLTIubW9uZ29kYi1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
     # hpa:
     #   enabled: true
     #   maxReplicas: 10
     #   cpu: 50
-    #   memory: 256Mi
+    #   memory: 256M
+
+#mongodb://user:password@mongodb-0.echo-mongodb-headless.stg.svc.cluster.local:27017,mongodb-1.echo-mongodb-headless.stg.svc.cluster.local:27017,mongodb-2.echo-mongodb-headless.stg.svc.cluster.local:27017/echos

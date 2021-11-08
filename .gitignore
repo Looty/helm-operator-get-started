@@ -3,6 +3,7 @@
 *.dll
 *.so
 *.dylib
+mongodb-values.yml
 
 # Test binary, build with `go test -c`
 *.test
