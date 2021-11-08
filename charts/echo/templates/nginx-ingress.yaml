@@ -9,16 +9,16 @@ spec:
   ingressClassName: {{ .Values.ingress.className }}
   tls:
     - hosts:
-      - {{ .Values.ingress.echoTls.domain }}
-      secretName: {{ .Values.ingress.echoTls.secretName }}
+      - {{ .Values.ingress.domain }}
+      secretName: {{ .Values.ingress.secretName }}
   rules:
-    - host: {{ .Values.ingress.echoTls.domain }}
+    - host: {{ .Values.ingress.domain }}
         http:
           paths:
             - path: "/"
               pathType: Prefix
               backend:
                 service:
-                  name: {{ .Values.ingress.nginxHosts.service }}
+                  name: {{ .Values.ingress.service }}
                   port: 
                     number: {{ .Values.container.port }}

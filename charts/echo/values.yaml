@@ -55,13 +55,9 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls: []
-
-  echoTls:
-    secretName: nginx-tls
-    domain: erezcowsay229q8sd5aks.tk
-  nginxHosts:
-    domain: ii2g3t2-g25di89.tk
-    service: echo
+  secretName: nginx-tls
+  domain: erezcowsay229q8sd5aks.tk
+  service: echo
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
