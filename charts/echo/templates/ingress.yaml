@@ -20,7 +20,8 @@ metadata:
     {{- include "echo.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }}
+    nginx.org/proxy-connect-timeout: {{ .Values.ingress.connectTimeout }}
+    cert-manager.io/cluster-issuer: {{ .Values.issuer.privateKeyName }}
   {{- end }}
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
@@ -28,34 +29,47 @@ spec:
   {{- end }}
   {{- if .Values.ingress.tls }}
   tls:
-    {{- range .Values.ingress.tls }}
     - hosts:
-        {{- range .hosts }}
-        - {{ . | quote }}
-        {{- end }}
-      secretName: {{ .secretName }}
-    {{- end }}
+      - {{ .Values.ingress.tls.domain }}
+      secretName: {{ .Values.ingress.tls.secretName }}
+    # {{- range .Values.ingress.tls }}
+    # - hosts:
+    #     {{- range .hosts }}
+    #     - {{ . | quote }}
+    #     {{- end }}
+    #   secretName: {{ .Values.ingress.tls.secretName }}
+    # {{- end }}
   {{- end }}
   rules:
-    {{- range .Values.ingress.hosts }}
-    - host: {{ .host | quote }}
-      http:
-        paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            {{- if and .pathType (semverCompare ">=1.18-0" $.Capabilities.KubeVersion.GitVersion) }}
-            pathType: {{ .pathType }}
-            {{- end }}
-            backend:
-              {{- if semverCompare ">=1.19-0" $.Capabilities.KubeVersion.GitVersion }}
-              service:
-                name: {{ $fullName }}
-                port:
-                  number: {{ $svcPort }}
-              {{- else }}
-              serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
-              {{- end }}
-          {{- end }}
-    {{- end }}
-{{- end }}
+    - host: {{ .Values.ingress.hosts.domain }}
+        http:
+          paths:
+            - path: "/"
+              pathType: Prefix
+              backend:
+                service:
+                  name: {{ .Values.ingress.hosts.service }}
+                  port: 
+                    number: {{ .Values.container.port }}
+#     {{- range .Values.ingress.hosts }}
+#     - host: {{ .host | quote }}
+#       http:
+#         paths:
+#           {{- range .paths }}
+#           - path: {{ .path }}
+#             {{- if and .pathType (semverCompare ">=1.18-0" $.Capabilities.KubeVersion.GitVersion) }}
+#             pathType: {{ .pathType }}
+#             {{- end }}
+#             backend:
+#               {{- if semverCompare ">=1.19-0" $.Capabilities.KubeVersion.GitVersion }}
+#               service:
+#                 name: {{ $fullName }}
+#                 port:
+#                   number: {{ $svcPort }}
+#               {{- else }}
+#               serviceName: {{ $fullName }}
+#               servicePort: {{ $svcPort }}
+#               {{- end }}
+#           {{- end }}
+#     {{- end }}
+# {{- end }}

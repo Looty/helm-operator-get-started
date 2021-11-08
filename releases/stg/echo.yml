@@ -20,7 +20,11 @@ spec:
     replicaCount: 1
     secret:
       url:
-        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAZWNoby1tb25nb2RiLXN0Zy0wLmVjaG8tbW9uZ29kYi1zdGctaGVhZGxlc3Muc3RnLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LGVjaG8tbW9uZ29kYi1zdGctMS5lY2hvLW1vbmdvZGItc3RnLWhlYWRsZXNzLnN0Zy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxlY2hvLW1vbmdvZGItc3RnLTAuZWNoby1tb25nb2RiLXN0Zy1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAZWNoby1tb25nb2RiLXJjLTAuZWNoby1tb25nb2RiLXJjLWhlYWRsZXNzLnJjLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LGVjaG8tbW9uZ29kYi1yYy0xLmVjaG8tbW9uZ29kYi1yYy1oZWFkbGVzcy5yYy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxlY2hvLW1vbmdvZGItcmMtMC5lY2hvLW1vbmdvZGItcmMtaGVhZGxlc3MucmMuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+    ingress:
+      hosts:
+        domain: prod.ii2g3t2-g25di89.tk
+        service: echo-prod
     # hpa:
     #   enabled: true
     #   maxReplicas: 10
