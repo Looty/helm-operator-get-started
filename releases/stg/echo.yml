@@ -25,5 +25,3 @@ spec:
       domain: prod.erezcowsay229q8sd5aks.tk
       service: echo-rc
       secretName: stg-tls
-    issuer:
-      privateKeyName: echo-stg

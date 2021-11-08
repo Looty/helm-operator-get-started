@@ -25,5 +25,3 @@ spec:
       domain: dev.erezcowsay229q8sd5aks.tk
       service: echo-dev
       secretName: dev-tls
-    issuer:
-      privateKeyName: echo-dev
