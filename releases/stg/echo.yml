@@ -20,7 +20,7 @@ spec:
     replicaCount: 1
     secret:
       url:
-        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAZWNoby1tb25nb2RiLXJjLTAuZWNoby1tb25nb2RiLXJjLWhlYWRsZXNzLnJjLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LGVjaG8tbW9uZ29kYi1yYy0xLmVjaG8tbW9uZ29kYi1yYy1oZWFkbGVzcy5yYy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxlY2hvLW1vbmdvZGItcmMtMC5lY2hvLW1vbmdvZGItcmMtaGVhZGxlc3MucmMuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
+        value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAZWNoby1tb25nb2RiLXJjLTAuZWNoby1tb25nb2RiLXJjLWhlYWRsZXNzLnN0Zy5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxlY2hvLW1vbmdvZGItcmMtMS5lY2hvLW1vbmdvZGItcmMtaGVhZGxlc3Muc3RnLnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LGVjaG8tbW9uZ29kYi1yYy0yLmVjaG8tbW9uZ29kYi1yYy1oZWFkbGVzcy5zdGcuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
     ingress:
       domain: prod.erezcowsay229q8sd5aks.tk
       service: echo-rc
