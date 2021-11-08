@@ -30,4 +30,4 @@ spec:
     persistence:
       size: 1Gi
     global:
-      namespaceOverride: prod
+      namespaceOverride: stg
