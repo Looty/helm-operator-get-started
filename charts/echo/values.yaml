@@ -49,16 +49,17 @@ ingress:
   className: "nginx"
   connectTimeout: '900s'
   annotations: {}
-  # hosts:
-  #   - host: chart-example.local
-  #     paths:
-  #       - path: /
-  #         pathType: ImplementationSpecific
-  #tls: []
-  tls:
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+  echoTls:
     secretName: nginx-tls
     domain: erezcowsay229q8sd5aks.tk
-  hosts:
+  nginxHosts:
     domain: ii2g3t2-g25di89.tk
     service: echo
   #  - secretName: chart-example-tls

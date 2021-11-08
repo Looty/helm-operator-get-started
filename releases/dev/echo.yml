@@ -22,8 +22,8 @@ spec:
       url:
         value: bW9uZ29kYjovL3VzZXI6cGFzc3dvcmRAZWNoby1tb25nb2RiLWRldi0wLmVjaG8tbW9uZ29kYi1kZXYtaGVhZGxlc3MuZGV2LnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3LGVjaG8tbW9uZ29kYi1kZXYtMS5lY2hvLW1vbmdvZGItZGV2LWhlYWRsZXNzLmRldi5zdmMuY2x1c3Rlci5sb2NhbDoyNzAxNyxlY2hvLW1vbmdvZGItZGV2LTAuZWNoby1tb25nb2RiLWRldi1oZWFkbGVzcy5kZXYuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNob3M=
     ingress:
-      hosts:
+      echoTls:
         domain: dev.ii2g3t2-g25di89.tk
-        service: echo-dev
+        service: echo-dev-echo
       # hpa:
       #   enabled: false
