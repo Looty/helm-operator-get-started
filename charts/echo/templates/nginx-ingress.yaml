@@ -13,12 +13,12 @@ spec:
       secretName: {{ .Values.ingress.secretName }}
   rules:
     - host: {{ .Values.ingress.domain }}
-        http:
-          paths:
-            - path: "/"
-              pathType: Prefix
-              backend:
-                service:
-                  name: {{ .Values.ingress.service }}
-                  port: 
-                    number: {{ .Values.container.port }}
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.ingress.service }}
+                port: 
+                  number: {{ .Values.container.port }}
