@@ -1,0 +1,12 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: adm
+spec:
+  releaseName: cert-manager
+  chart:
+    git: git@github.com:Looty/helm-operator-get-started.git
+    path: charts/cert-manager
+    ref: master

@@ -1,0 +1,12 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: adm
+spec:
+  releaseName: ingress-nginx
+  chart:
+    git: git@github.com:Looty/helm-operator-get-started.git
+    path: charts/ingress-nginx
+    ref: master
