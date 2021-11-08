@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: looty10/echo
-      tag: stg-eggihjvb
+      tag: stg-snasjahs
     replicaCount: 1
     secret:
       url:
@@ -27,5 +27,3 @@ spec:
     #   maxReplicas: 10
     #   cpu: 50
     #   memory: 256M
-
-#mongodb://user:password@mongodb-0.echo-mongodb-headless.stg.svc.cluster.local:27017,mongodb-1.echo-mongodb-headless.stg.svc.cluster.local:27017,mongodb-2.echo-mongodb-headless.stg.svc.cluster.local:27017/echos

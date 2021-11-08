@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: looty10/echo
-      tag: 0.4.10
+      tag: 0.4.11
     replicaCount: 1
     secret:
       url:
