@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: looty10/echo
-      tag: stg-eggihjvb
+      tag: stg-snasjahs
     replicaCount: 1
     secret:
       url:
