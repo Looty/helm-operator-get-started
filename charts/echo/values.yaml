@@ -45,7 +45,7 @@ service:
   protocol: TCP
 
 ingress:
-  enabled: false
+  enabled: true
   className: "nginx"
   connectTimeout: '900s'
   annotations: {}
