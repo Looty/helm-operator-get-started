@@ -24,8 +24,5 @@ spec:
     ingress:
       domain: prod.erezcowsay229q8sd5aks.tk
       service: echo-rc
-    # hpa:
-    #   enabled: true
-    #   maxReplicas: 10
-    #   cpu: 50
-    #   memory: 256M
+    issuer:
+      privateKeyName: echo-stg

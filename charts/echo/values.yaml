@@ -94,9 +94,8 @@ configMap:
   dbName: echos
 
 issuer:
-  privateKeyName: 'letsencrypt-prod'
+  privateKeyName: letsencrypt-prod
   email: erezmizra@gmail.com
-  kind: ClusterIssuer
 
 cronJob:
   name: mongodb-cleaner

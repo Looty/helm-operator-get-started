@@ -24,3 +24,5 @@ spec:
     ingress:
       domain: stg.erezcowsay229q8sd5aks.tk
       service: echo-prod
+    issuer:
+      privateKeyName: echo-prod
